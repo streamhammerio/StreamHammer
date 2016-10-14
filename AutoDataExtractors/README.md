@@ -2,7 +2,7 @@
 
 Stream Hammer utilizes Docker to deploy its remote applications which automatically extract and transmit data in real-time.  In order to utilize these applications, you'll first need to install the Docker runtime.  More information about Docker can be found on the [Docker Project Page](https://www.docker.com/what-docker).  
   
-A prerequisite for all StreamHammer Auto Data Extractors is the installation of the [Docker Engine](https://www.docker.com/products/docker-engine).  Installation instructions can be found on the Docker website for [MAC](http://www.docker.com/products/docker#/mac), [Windows](http://www.docker.com/products/docker#/windows), [Linux](http://www.docker.com/products/docker#/linux), [AWS](http://www.docker.com/products/docker#/AWS), [Azure](http://www.docker.com/products/docker#/azure) and [Windows Server](https://blog.docker.com/2016/09/dockerforws2016/).  Additionally, command line instructions can be found below for the environments that the StreamHammer Auto Data Extractors have been tested on.
+A prerequisite for all StreamHammer Auto Data Extractors is the installation of the [Docker Engine](https://www.docker.com/products/docker-engine).  Installation instructions can be found on the Docker website for [MAC](http://www.docker.com/products/docker#/mac), [Windows](http://www.docker.com/products/docker#/windows), [Linux](http://www.docker.com/products/docker#/linux), [AWS](http://www.docker.com/products/docker#/AWS), [Azure](http://www.docker.com/products/docker#/azure) and [Windows Server](https://blog.docker.com/2016/09/dockerforws2016/).  Additionally, command line instructions can be found below for the environments that the StreamHammer Auto Data Extractors have been tested on.  
   
 ###Install Docker on CentOS 7 - Command Line How-To
 ```
@@ -12,7 +12,7 @@ curl -fsSL https://get.docker.com/ | sh
 sudo service docker start
 sudo docker run hello-world
 sudo chkconfig docker on
-```
+```  
   
   
 ##StreamHammer Auto Data Extractors
@@ -27,8 +27,7 @@ mkdir /opt/watch4
 docker run -it --restart=on-failure:10 --name streamhammer-unix-fs-watcher -v /opt/watch4:/tmp/watch streamhammer/unix-fs-watch:latest
 ```
 #####Configure 
-API: Get at [StreamHammer.io](https://app.streamhammer.io/).  
-Location: Get at [StreamHammer.io](https://app.streamhammer.io/).  
+Stream Id: Get at [StreamHammer.io](https://app.streamhammer.io/).  
 Cleanup: y  
 
 #####Usage
