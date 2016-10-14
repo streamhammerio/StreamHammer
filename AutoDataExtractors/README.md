@@ -27,7 +27,7 @@ sudo chmod 777 /watchout/files
 ```
 #####Download and Run the Stream Hammer Unix File Watcher, with Auto-Restart on Error
 ```
-docker run -it --restart=on-failure:10 --name streamhammer-unix-fs-watcher -v /watchout/files:/watch/files streamhammer/unix-fs-watch:latest
+docker run -it --restart=on-failure:10 --name streamhammer-unix-fs-watcher -v /watchout/files:/watch/files streamhammer/unix-fs-watch:stable
 ```
 #####Configure 
 Stream Id: Get at [StreamHammer.io](https://app.streamhammer.io/).  
