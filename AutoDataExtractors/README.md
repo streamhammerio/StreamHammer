@@ -20,11 +20,14 @@ sudo chkconfig docker on
 ####Installation on CentOS 7
 #####Create directory to write files for transmission
 ```
-mkdir /opt/watch4
+sudo mkdir /watchout
+sudo mkdir /watchout/files
+sudo chmod 777 /watchout
+sudo chmod 777 /watchout/files
 ```
 #####Download and Run the Stream Hammer Unix File Watcher, with Auto-Restart on Error
 ```
-docker run -it --restart=on-failure:10 --name streamhammer-unix-fs-watcher -v /opt/watch4:/tmp/watch streamhammer/unix-fs-watch:latest
+docker run -it --restart=on-failure:10 --name streamhammer-unix-fs-watcher -v /watchout/files:/watch/files streamhammer/unix-fs-watch:latest
 ```
 #####Configure 
 Stream Id: Get at [StreamHammer.io](https://app.streamhammer.io/).  
